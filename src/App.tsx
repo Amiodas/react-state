@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import CounterWithClass from './components/CounterWithClassComponent';
+import CounterWithFuncCompoent from './components/CounterWithFuncComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App border border-purple-500 p-10 m-10">
+      <h1 className='text-2xl font-semibold mb-2'>React app</h1>
+      <p className='mb-4 text-left'>Value of counter: 0</p>
+      {/* <CounterWithClass /> */}
+      <CounterWithFuncCompoent />
     </div>
   );
 }
