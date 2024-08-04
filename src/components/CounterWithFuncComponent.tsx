@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+type TCount = {
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+};
 
-const CounterWithFuncCompoent = () => {
-  const [count, setCount] = useState(0);
-
+const CounterWithFuncCompoent = ({ count, setCount }: TCount) => {
   return (
     <div className="border border-red-300 p-5">
       <button
