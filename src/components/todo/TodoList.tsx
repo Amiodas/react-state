@@ -5,18 +5,18 @@ const TodoList = () => {
   const { state, dispatch } = useContext(TodoContext);
   console.log(state);
   return (
-    <div>
-      {state?.map((item) => (
+    <div className="mt-3">
+      {state?.map((item, index) => (
         <div key={item.id}>
           <p
-            className={
-              item.isCompleted === true ? "line-through" : ""
-            }
             onClick={() =>
               dispatch({ type: "taskCompleted", payload: item.id })
             }
           >
-            {item.title}
+            {index + 1}.{" "}
+            <span className={item.isCompleted === true ? "line-through" : ""}>
+              {item.title}
+            </span>
           </p>
         </div>
       ))}

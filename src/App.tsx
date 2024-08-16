@@ -12,9 +12,11 @@ function App() {
   // const [count, setCount] = useState(0);
   return (
     <TodoProvider>
-      <div>
+      <div className="flex justify-center">
+        <div>
         <TodoForm />
         <TodoList />
+        </div>
       </div>
     </TodoProvider>
   );

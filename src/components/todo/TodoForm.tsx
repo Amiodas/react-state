@@ -17,18 +17,19 @@ const TodoForm = () => {
     dispatch({ type: "addTodo", payload: todo });
   };
   return (
-    <div>
-      <h1 className="text-2xl">Add todo</h1>
+    <div className="mt-5">
+      <h1 className="text-2xl mb-3">Add todo</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="Todo">Task</label>
+        <label htmlFor="Todo">Task Name: </label>
         <input
-          className="border border-blue-600"
+          className="border border-blue-600 p-1 rounded"
           type="text"
           name="todo"
+          placeholder="Enter task enter"
           id="todo"
           onBlur={(e) => setTask(e.target.value)}
         />
-        <button className="btn btn-primary" type="submit">
+        <button className="btn bg-purple-500 text-white p-1 ml-3" type="submit">
           Submit
         </button>
       </form>
