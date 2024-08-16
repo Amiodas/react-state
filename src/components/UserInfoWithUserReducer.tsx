@@ -7,11 +7,11 @@ type TAction = {
 
 const initialState = {
   name: "",
-  age: 0,
+  age: "",
   hobbies: [] as string[],
 };
 
-const reducer = (currentState: any, action: any) => {
+const reducer = (currentState: any, action: TAction) => {
   switch (action.type) {
     case "addName":
       return { ...currentState, name: action.payload };
